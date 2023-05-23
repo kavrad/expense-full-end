@@ -26,7 +26,7 @@ exports.forgotPassword=async function(req,res,next){
     
  const client= Sib.ApiClient.instance;
  const apiKey=client.authentications['api-key'];
- apiKey.apiKey= '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';
+ apiKey.apiKey=process.env.SEND_KEY;
  const tranEmailApi=new Sib.TransactionalEmailsApi();
  const sender={
     email:'kavyaht39@gmail.com',
